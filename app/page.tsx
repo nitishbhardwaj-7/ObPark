@@ -1,65 +1,70 @@
-import Image from "next/image";
+import BorderButton from '@/src/components/Buttons/BorderButton'
+import FillButton from '@/src/components/Buttons/FillButton'
+import Header from '@/src/components/Layout/Header'
+import SmHeader from '@/src/components/Layout/SmHeader'
+import HeroSection from '@/src/components/Sections/HeroSection'
+import RiveCard from '@/src/components/Sections/RiveCard'
+import ParagraphText from '@/src/components/Texts/ParagraphText'
+import Image from 'next/image'
+import React from 'react'
 
-export default function Home() {
+function page() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+    <div className='min-h-screen bg-linear-to-r from-[#C7EDE4] to-[#9BF2DE] flex flex-col items-center'>
+      <Header />
+
+      <div className='flex flex-col w-[84%] md:w-[45%] items-center mt-5'>
+        <HeroSection />
+      </div>
+      <div className='items-center w-[90%] md:w-[72%] h-93 md:h-145 flex flex-col mt-15 gap-7 border-b'>
+        <div className='flex gap-4 md:gap-0 w-full md:w-[27%] justify-between'>
+          <FillButton size='md'>TALK TO ELLA</FillButton>
+          <BorderButton size='lg'>LEARN MORE</BorderButton>
+        </div>
+        <div className='flex w-full gap-4 md:gap-0 md:mt-10 justify-between'>
+          <div className='hidden md:block'>
+            <RiveCard />
+          </div>
+          <RiveCard />
+          <RiveCard />
+          <div className='hidden md:block'>
+            <RiveCard />
+          </div>
+        </div>
+        <div className='flex flex-col w-full items-start uppercase gap-3 md:flex-row md:items-center md:justify-between md:mt-13'>
+          <BorderButton size='sm'>NEWS</BorderButton>
+          <ParagraphText size='sm'>Powering Your brand Workflows with Intelligent Automation</ParagraphText>
+        </div>
+      </div>
+
+      <div className='relative w-[90%] md:[72%] lg:w-[72%] overflow-hidden'>
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+          src="/images/Linked Path Group.svg"
+          alt="bg"
+          width={1100}
+          height={1000}
+          className="absolute top-25 right-0 hidden md:block"
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+
+        <div className='text-2xl mt-15 ml-3 leading-7.5 w-full md:w-[65%]'>
+          <h1 className='mgbold mb-5 md:text-4xl'>
+            Streamline processes. Empower people. Obrive enables organisations to modernise operations through smart automation—turning manual effort into strategic execution.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+          <BorderButton size='lg'>OUR MISSION</BorderButton>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className='relative z-10 mb-20'>
+          <video autoPlay muted loop className='rounded-4xl mt-30 mb-5 md:rounded-[3rem]' src="/videos/obriveintro.mp4"></video>
+          <div className='w-full md:w-[60%] md:ml-15'>
+            <ParagraphText size='md'>Stay ahead of the future—create immersive Augmented Reality, Virtual Reality, and Mixed Reality experiences, design stunning 3D environments, and harness the power of spatial computing—all from one innovative platform with Obrive Industries.</ParagraphText>
+          </div>
+
+
         </div>
-      </main>
+
+      </div>
+
     </div>
-  );
+  )
 }
+
+export default page
