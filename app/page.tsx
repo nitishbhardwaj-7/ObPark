@@ -1,5 +1,6 @@
 import BorderButton from '@/src/components/Buttons/BorderButton'
 import FillButton from '@/src/components/Buttons/FillButton'
+import CarAnimation from '@/src/components/Layout/CarAnimation'
 import Header from '@/src/components/Layout/Header'
 import SmHeader from '@/src/components/Layout/SmHeader'
 import HeroSection from '@/src/components/Sections/HeroSection'
@@ -10,7 +11,9 @@ import React from 'react'
 
 function page() {
   return (
-    <div className='min-h-screen bg-linear-to-r from-[#C7EDE4] to-[#9BF2DE] flex flex-col items-center'>
+
+    <main className='min-h-screen'>
+      <div className='min-h-screen bg-linear-to-r from-[#C7EDE4] to-[#9BF2DE] flex flex-col items-center'>
       <Header />
 
       <div className='flex flex-col w-[84%] md:w-[45%] items-center mt-5'>
@@ -53,7 +56,7 @@ function page() {
           <BorderButton size='lg'>OUR MISSION</BorderButton>
         </div>
         <div className='relative z-10 mb-20'>
-          <video autoPlay muted loop className='rounded-4xl mt-30 mb-5 md:rounded-[3rem]' src="/videos/obriveintro.mp4"></video>
+          <video autoPlay muted loop playsInline controls className='rounded-4xl mt-30 mb-5 md:rounded-[3rem]' src="/videos/obriveintro.mp4"></video>
           <div className='w-full md:w-[60%] md:ml-15'>
             <ParagraphText size='md'>Stay ahead of the future—create immersive Augmented Reality, Virtual Reality, and Mixed Reality experiences, design stunning 3D environments, and harness the power of spatial computing—all from one innovative platform with Obrive Industries.</ParagraphText>
           </div>
@@ -64,6 +67,22 @@ function page() {
       </div>
 
     </div>
+
+    <div className='bg-white h-200 w-full '>
+
+      <CarAnimation/>
+
+      <div className='flex border-'>
+
+
+
+      </div>
+
+
+    </div>
+
+
+    </main>
   )
 }
 
