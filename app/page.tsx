@@ -1,6 +1,7 @@
 import BorderButton from '@/src/components/Buttons/BorderButton'
 import FillButton from '@/src/components/Buttons/FillButton'
 import CarAnimation from '@/src/components/Layout/CarAnimation'
+import GreenCard from '@/src/components/Layout/GreenCard'
 import Header from '@/src/components/Layout/Header'
 import SmHeader from '@/src/components/Layout/SmHeader'
 import HeroSection from '@/src/components/Sections/HeroSection'
@@ -72,12 +73,10 @@ function page() {
 
       <CarAnimation/>
 
-      <div className='flex border-'>
-
-
-
+      <div className='md:flex items-center justify-center gap-10 pt-15'>
+    <GreenCard title='Smart Parking Solution' description='Our Smart Parking Solution offers fast vehicle access within 3 seconds, automatic transaction recording for hassle-free payments, and real-time parking spot availability to minimize search time.visits stress-free and convenient.' imageSrc='/images/card1img.jpg'/>
+    <GreenCard title='Access Management System' description='Our Smart Parking Solution offers fast vehicle access within 3 seconds, automatic transaction recording for hassle-free payments, and real-time parking spot availability to minimize search time.visits stress-free and convenient.' imageSrc='/images/card2img.jpg'/>
       </div>
-
 
     </div>
 
