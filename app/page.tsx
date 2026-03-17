@@ -76,7 +76,11 @@ function page() {
       <div className='md:flex items-center justify-center gap-10 pt-15'>
     <GreenCard title='Smart Parking Solution' description='Our Smart Parking Solution offers fast vehicle access within 3 seconds, automatic transaction recording for hassle-free payments, and real-time parking spot availability to minimize search time.visits stress-free and convenient.' imageSrc='/images/card1img.jpg' imgAlt=''/>
     <GreenCard title='Access Management System' description='Our Smart Parking Solution offers fast vehicle access within 3 seconds, automatic transaction recording for hassle-free payments, and real-time parking spot availability to minimize search time.visits stress-free and convenient.' imageSrc='/images/card2img.jpg' imgAlt=''/>
+
+
       </div>
+
+      <CarAnimation/>
 
     </div>
 
