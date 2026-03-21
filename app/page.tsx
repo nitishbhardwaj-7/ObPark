@@ -1,12 +1,15 @@
-import BorderButton from '@/src/components/Buttons/BorderButton'
-import FillButton from '@/src/components/Buttons/FillButton'
-import CarAnimation from '@/src/components/Layout/CarAnimation'
-import GreenCard from '@/src/components/Layout/GreenCard'
-import Header from '@/src/components/Layout/Header'
-import SmHeader from '@/src/components/Layout/SmHeader'
-import HeroSection from '@/src/components/Sections/HeroSection'
-import RiveCard from '@/src/components/Sections/RiveCard'
-import ParagraphText from '@/src/components/Texts/ParagraphText'
+import NavBar from '@/components/Layout/NavBar'
+import BorderButton from '@/components/Buttons/BorderButton'
+import FillButton from '@/components/Buttons/FillButton'
+import CarAnimation from '@/components/Layout/CarAnimation'
+import GreenCard from '@/components/Layout/GreenCard'
+import Header from '@/components/Layout/Header'
+import SmHeader from '@/components/Layout/SmHeader'
+import HeroSection from '@/components/Sections/HeroSection'
+import Parking from '@/components/Sections/Parking'
+import RiveCard from '@/components/Sections/RiveCard'
+import ParagraphText from '@/components/Texts/ParagraphText'
+import TitleText from '@/components/Texts/TitleText'
 import Image from 'next/image'
 import React from 'react'
 
@@ -14,10 +17,10 @@ function page() {
   return (
 
     <main className='min-h-screen'>
+      <NavBar/>
       <div className='min-h-screen bg-linear-to-r from-[#C7EDE4] to-[#9BF2DE] flex flex-col items-center'>
-      <Header />
 
-      <div className='flex flex-col w-[84%] md:w-[45%] items-center mt-5'>
+      <div className='flex flex-col w-[84%] md:w-[45%] items-center mt-25'>
         <HeroSection />
       </div>
       <div className='items-center w-[90%] md:w-[72%] h-93 md:h-145 flex flex-col mt-15 gap-7 border-b'>
@@ -73,14 +76,58 @@ function page() {
 
       <CarAnimation/>
 
-      <div className='md:flex items-center justify-center gap-10 pt-15'>
-    <GreenCard title='Smart Parking Solution' description='Our Smart Parking Solution offers fast vehicle access within 3 seconds, automatic transaction recording for hassle-free payments, and real-time parking spot availability to minimize search time.visits stress-free and convenient.' imageSrc='/images/card1img.jpg' imgAlt=''/>
-    <GreenCard title='Access Management System' description='Our Smart Parking Solution offers fast vehicle access within 3 seconds, automatic transaction recording for hassle-free payments, and real-time parking spot availability to minimize search time.visits stress-free and convenient.' imageSrc='/images/card2img.jpg' imgAlt=''/>
+      <div className='flex flex-col md:flex-row items-center justify-center gap-12 md:gap-10 pt-15'>
+    <GreenCard title='Smart Parking Solution' description='Our Smart Parking Solution offers fast vehicle access within 3 seconds, automatic transaction recording for hassle-free payments, and real-time parking spot availability to minimize search time.visits stress-free and convenient.' imageSrc='/images/SmartParkingSolution.png' imgAlt=''/>
+    <GreenCard title='Access Management System' description='Our Smart Parking Solution offers fast vehicle access within 3 seconds, automatic transaction recording for hassle-free payments, and real-time parking spot availability to minimize search time.visits stress-free and convenient.' imageSrc='/images/SmartParkingSolution2.png' imgAlt=''/>
 
 
       </div>
 
       <CarAnimation/>
+
+      <div className='flex items-center justify-center'>
+         <Parking/>
+      </div>
+
+      <div className='flex flex-col items-center justify-center w-full text-center mt-10 md:mt-35'>
+
+        <div className='flex flex-col items-center justify-center w-90 md:w-240 gap-5 md:gap-10'>
+          <h1 className='mgbold text-xl md:text-6xl text-[#074038]'>What Makes Us Different.</h1>
+        <p className='text-xs md:text-xl'>At Obpark, we don’t just guide you to a parking space—we redefine how you experience the entire parking journey. Our difference lies in combining cutting-edge immersive technology with practical, real-world solutions that benefit both drivers and businesses.</p>
+
+        </div>
+
+        <div className='bg-[#074038] h-100 w-full mt-35 flex justify-around'>
+          <Image
+          src='/images/GreenDivRoadImg.png'
+          alt=''
+          height={100}
+          width={100}
+          />
+          <Image
+          src='/images/RoadImg2.png'
+          alt=''
+          height={100}
+          width={100}
+          />
+          <Image
+          src='/images/RoadImg3.png'
+          alt=''
+          height={100}
+          width={100}
+          />
+          <Image
+          src='/images/RoadImg4.png'
+          alt=''
+          height={100}
+          width={100}
+          />
+          
+        </div>
+
+        
+      </div>
+
 
     </div>
 

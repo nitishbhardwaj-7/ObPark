@@ -14,11 +14,11 @@ function CarAnimation() {
   useEffect(() => {
 
     gsap.to(carRef.current, {
-      x: 800, // distance car travels
+      x: 1400, // distance car travels
       ease: "none",
       scrollTrigger: {
         trigger: carRef.current,
-        start: "top 80%",
+        start: "top 100%",
         end: "top 20%",
         scrub: true
       }
@@ -27,7 +27,7 @@ function CarAnimation() {
   }, [])
 
   return (
-    <div className='border-b-4 border-t-4 h-10 md:h-20 mt-15 border-gray-300 flex relative items-center'>
+    <div className='border-b-4 border-t-4 h-10 md:h-20 mt-15 border-gray-300 flex relative items-center overflow-hidden'>
 
       <div className='flex overflow-hidden'>
         <Image className='opacity-50' src={'/images/Border 1.png'} width={500} height={900} alt='Road'/>
@@ -36,7 +36,7 @@ function CarAnimation() {
         <Image className='hidden md:block opacity-50' src={'/images/Border 1.png'} width={500} height={900} alt='Road'/>
       </div>
 
-      {/* Car */}
+      
       <div ref={carRef} className='absolute flex items-center'>
         <Image
           src={'/images/Car Frame 2.png'}

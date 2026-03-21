@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Michroma } from "next/font/google";
+import SmoothScroll from "@/components/Layout/SmoothScroll";
 
 const michroma = Michroma({
   subsets: ["latin"],
@@ -33,7 +34,8 @@ export default function RootLayout({
       <body
         className={michroma.className}
       >
-        {children}
+         <SmoothScroll>{children}</SmoothScroll>
+         
       </body>
     </html>
   );
