@@ -12,6 +12,7 @@ import ParagraphText from '@/components/Texts/ParagraphText'
 import TitleText from '@/components/Texts/TitleText'
 import Image from 'next/image'
 import React from 'react'
+import CarAnimationReverse from '@/components/Layout/CarAnimationReverse'
 
 function page() {
   return (
@@ -83,7 +84,7 @@ function page() {
 
       </div>
 
-      <CarAnimation/>
+      <CarAnimationReverse/>
 
       <div className='flex items-center justify-center'>
          <Parking/>
