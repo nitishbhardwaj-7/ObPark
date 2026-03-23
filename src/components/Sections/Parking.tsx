@@ -1,21 +1,53 @@
+"use client"
 import Image from "next/image";
 import HoverAccordion from "../Layout/HoverAccordion";
 import ParagraphText from "../Texts/ParagraphText";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
 
 const Parking = () => {
+  const carRef = useRef(null)
+  useEffect(() => {
+
+  gsap.fromTo(
+    carRef.current,
+    { y: -50 }, // start above
+    {
+      y: 530, // move downward
+      ease: "none",
+      scrollTrigger: {
+        trigger: carRef.current,
+        start: "top 70%",
+        end: "top 10%",
+        scrub: true
+      }
+    }
+  )
+
+}, [])
   return (
     <div className="my-10 lg:my-20 flex flex-col gap-10 lg:gap-16 px-4">
 
       {/* Header */}
       <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 items-start">
 
-        <Image
-          src="/images/ParkingSectionImage.png"
+       <div className="flex items-start justify-center">
+         <Image
+          src="/images/ParkingAnimImg.png"
           alt="bg"
-          width={50}
+          width={40}
           height={50}
           className="hidden md:block"
         />
+         <Image
+         ref={carRef}
+          src="/images/CarAnimImg.png"
+          alt="bg"
+          width={70}
+          height={100}
+          className="absolute"
+        />
+       </div>
 
         <div className="w-full lg:w-180 flex flex-col gap-6">
 
